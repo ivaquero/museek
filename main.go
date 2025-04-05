@@ -1,10 +1,10 @@
 package main
 
 import (
-	"github.com/ivaquero/museek/cli"
+	"github.com/ivaquero/museek/cmd"
 )
 
 // main the entrypoint for the downloader.
 func main() {
-	cli.Execute()
+	cmd.Execute()
 }
