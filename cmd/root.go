@@ -11,6 +11,7 @@ import (
 var (
 	cfgFile  string
 	logLevel string
+	verbose  bool
 )
 
 var rootCmd = &cobra.Command{
@@ -27,6 +28,8 @@ func init() {
 	// will be global for your application.
 	rootCmd.PersistentFlags().StringVar(&cfgFile, "config", "", "config file (default is $HOME/.museek.yaml)")
 	rootCmd.PersistentFlags().StringVar(&logLevel, "log-level", "info", "Set log level (error/warn/info/debug)")
+	rootCmd.PersistentFlags().BoolVarP(&verbose, "verbose", "v", false, "verbose output")
+
 }
 
 // initConfig reads in config file and ENV variables if set.
